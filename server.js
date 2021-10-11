@@ -4,10 +4,13 @@ const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 // const wordRouter = require("./controllers/word");
-// const UserRouter = require("./controllers/user")
+// const UserRouter = require("./controllers/user");
+const mongoose = require ('mongoose')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const app = express()
+const MONGODB_URI = process.env.MONGODB_URI
+
 //middleware
 app.use(morgan("tiny"))
 app.use(methodOverride("_method")) 
@@ -23,10 +26,6 @@ app.use(session({
 }))
 // app.use("/words", wordRouter)
 // app.use("/user", UserRouter)
-
-db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
-db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
-db.on('disconnected', () => console.log('mongod disconnected'));
 
 
 // Routes

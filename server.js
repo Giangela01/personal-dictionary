@@ -24,6 +24,11 @@ app.use(session({
 // app.use("/words", wordRouter)
 // app.use("/user", UserRouter)
 
+db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
+db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
+db.on('disconnected', () => console.log('mongod disconnected'));
+
+
 // Routes
 app.get("/", (req, res) => {
     res.send("index.ejs")

@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs") %>
+
 <body>
     <header>
-        <h1>Dictionary + Logs</h1>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Dictionary + Logs</span>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Create Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <form id="search">
             <input type="text" id="s-word" name="s-data" size="12" placeholder="Enter Word"><br>
             <input type="submit" id="s-btn" value="Press ENTER">

@@ -9,7 +9,6 @@ const mongoose = require ('mongoose')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const app = express()
-const MONGODB_URI = process.env.MONGODB_URI
 
 //middleware
 app.use(morgan("tiny"))
@@ -30,10 +29,10 @@ app.use(session({
 
 // Routes
 app.get("/", (req, res) => {
-    res.send("index.ejs")
+    res.render("index.ejs")
 })
 
 
 
 const PORT = process.env.PORT
-app.listen(PORT, () => console.log(`On port ${PORT}`))
+app.listen(PORT || 4000, () => console.log(`On port ${PORT}`))

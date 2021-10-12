@@ -7,19 +7,42 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Dictionary + Logs</span>
+                <div class="btn-group" role="group">
+                    <a href="/user/new"><button type="button" class="btn btn-primary btn-sm">Saved Words</button></a>
+                    <a href="/user/logout"><button type="button" class="btn btn-primary btn-sm">Logout</button></a>
+                </div>
         </nav>
         <form id="search">
             <input type="text" id="s-word" name="s-data" size="12" placeholder="Enter Word"><br>
             <input type="submit" id="s-btn" value="Press ENTER">
         </form>
     </header>
-    <div id="main-container">
-        <div id="search-word"></div>
-        <div id="pos-phonetics"></div>
-        <div id="def-title"></div>
-        <div id="definition"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="main-container">
+                    <div id="search-word"></div>
+                    <div id="pos-phonetics"></div>
+                    <div id="def-title"></div>
+                    <div id="definition"></div>
+                </div>
+            </div>
+            <div class="col">
+                <form action="/words" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Word:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="A word you want to save...">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Log:</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <input type="submit" value="Save Your Word" />
+                    </div>
+            </div>
+        </div>
+        </form>
     </div>
-    
 </body>
 
 </html>

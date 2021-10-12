@@ -5,6 +5,7 @@ const $input = $('input[type="text"]');
 $('#search').on('submit', getInfo);
 $('#search').on('reset', resetInfo);
 
+
 function getInfo(event) {
 
     event.preventDefault();

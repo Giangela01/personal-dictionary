@@ -9,41 +9,6 @@ router.use((req, res, next) => {
         res.redirect("/user/login");
     }
 });
-// Routes
-// router.get("/seed", (req, res) => {
-
-//     const farmAnimals = [{
-//             name: "Orange",
-//             livestock: "Chicken",
-//             utilization: "Meat",
-//             readyToTransport: false
-//         },
-//         {
-//             name: "Chocolate",
-//             livestock: "Cow",
-//             utilization: "Milk",
-//             readyToTransport: false
-//         },
-//         {
-//             name: "Shaun",
-//             livestock: "Sheep",
-//             utilization: "Wool",
-//             readyToTransport: false
-//         },
-//         {
-//             name: "Donald",
-//             livestock: "Duck",
-//             utilization: "Eggs",
-//             readyToTransport: false
-//         },
-//     ]
-
-//     Animal.remove({}, (err, data) => {
-//         Animal.create(farmAnimals, (err, data) => {
-//             res.json(data);
-//         });
-//     });
-// });
 
 router.get("/", (req, res) => {
     Word.find({
@@ -56,8 +21,8 @@ router.get("/", (req, res) => {
 })
 
 
-router.get('/new', (req, res) => {
-    res.render("words/new.ejs")
+router.get('/savedwords', (req, res) => {
+    res.render("words/saveword.ejs")
 })
 
 router.get("/:id/edit", (req, res) => {

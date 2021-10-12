@@ -6,10 +6,8 @@ const {
 } = mongoose
 
 const wordsSchema = new Schema({
-    searchedWord: String,
-    partOfSpeech: String,
-    definition: String,
-    comment: String,
+    Word: String,
+    Log: String,
 })
 const Word = model("Word", wordsSchema);
 

@@ -2,8 +2,8 @@ let wordData;
 
 const $input = $('input[type="text"]');
 
-$('form').on('submit', getInfo);
-$('form').on('reset', resetInfo);
+$('#search').on('submit', getInfo);
+$('#search').on('reset', resetInfo);
 
 function getInfo(event) {
 

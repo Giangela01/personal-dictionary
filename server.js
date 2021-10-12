@@ -4,7 +4,7 @@ const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 // const wordRouter = require("./controllers/word");
-// const UserRouter = require("./controllers/user");
+const UserRouter = require("./controllers/user");
 const mongoose = require ('mongoose')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
@@ -24,7 +24,7 @@ app.use(session({
     resave: false,
 }))
 // app.use("/words", wordRouter)
-// app.use("/user", UserRouter)
+app.use("/user", UserRouter)
 
 
 // Routes

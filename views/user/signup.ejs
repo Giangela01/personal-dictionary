@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %>
+  <%- include("../partials/head.ejs") %>
 
-<body>
-  <%- include("../partials/header.ejs") %>
-  <main>
-    <div>
-      <form action="/user/signup" method="post">
-        <fieldset>
-        <div class="mb-3">
-          <label for="InputUser" class="form-label">Username:</label>
-          <input type="text" name="user-name" required class="form-control" />
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" required />
-        </div>
-        <button type="submit" class="btn btn-primary">Create Account</button>
-      </fieldset>
-      </form>
-    </div>
-  </main>
-</body>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <form action="/user/signup" method="post">
+          <fieldset>
+            <legend>New User</legend>
+            <label
+              >USERNAME: <input type="text" name="username" required />
+            </label>
+            <label
+              >PASSWORD: <input type="password" name="password" required />
+            </label>
+            <input type="submit" value="Create Account" />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>

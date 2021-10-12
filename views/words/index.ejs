@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Dictionary + Logs</span>
+        </nav>
+        <form id="search">
+            <input type="text" id="s-word" name="s-data" size="12" placeholder="Enter Word"><br>
+            <input type="submit" id="s-btn" value="Press ENTER">
+        </form>
+    </header>
+    <div id="main-container">
+        <div id="search-word"></div>
+        <div id="pos-phonetics"></div>
+        <div id="def-title"></div>
+        <div id="definition"></div>
+    </div>
+    
+</body>
+
+</html>

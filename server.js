@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
-// const wordRouter = require("./controllers/word");
+const wordRouter = require("./controllers/word");
 const UserRouter = require("./controllers/user");
 const mongoose = require ('mongoose')
 const session = require('express-session');
@@ -23,7 +23,7 @@ app.use(session({
     saveUninitialized: true,
     resave: false,
 }))
-// app.use("/words", wordRouter)
+app.use("/words", wordRouter)
 app.use("/user", UserRouter)
 
 

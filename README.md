@@ -17,8 +17,10 @@
 * Bootstrap | Google Fonts
 * Dictionary API: https://dictionaryapi.dev/
 
-### ERD and Wireframes
+### ERD and Main Page Wireframes
 ![ERD](https://github.com/Giangela01/personal-dictionary/blob/main/images/Dictionary%20ERD.png)
+![Main Page](https://github.com/Giangela01/personal-dictionary/blob/main/images/WF%20main-page.png)
+![User-Main Page](https://github.com/Giangela01/personal-dictionary/blob/main/images/WF%20user-mainpage.png)
 
 #### Deployed Site
 https://dictionary-logs.herokuapp.com/

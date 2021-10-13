@@ -9,8 +9,6 @@ User:
 User Show Pages:
 ![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20user%20main%20page.png)
 ![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20log%20page.png)
-![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20log%20page.png)
-
 
 ### Technologies Used
 * EJS| CSS3 | Javascript | jQuery
@@ -18,7 +16,8 @@ User Show Pages:
 * Bootstrap | Google Fonts
 * Dictionary API: https://dictionaryapi.dev/
 
-### Wireframes
+### ERD and Wireframes
+![ERD](https://github.com/Giangela01/personal-dictionary/blob/main/images/Dictionary%20ERD.png)
 
 #### Deployed Site
 https://dictionary-logs.herokuapp.com/

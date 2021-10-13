@@ -4,9 +4,8 @@
 ### Usage Example
 
 ### Technologies Used
-* HTML5 | CSS3 | Javascript
-* jQuery
-* node.js | Express | Mongoose | Ejs | MongoDB
+* EJS| CSS3 | Javascript | jQuery
+* node.js | Express | Mongoose | MongoDB
 * Bootstrap | Google Fonts
 * Dictionary API: https://dictionaryapi.dev/
 

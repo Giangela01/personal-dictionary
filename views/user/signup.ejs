@@ -5,16 +5,16 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <div>
+      <div class="center-align">
         <form action="/user/signup" method="post">
           <fieldset>
-            <legend>New User</legend>
-            <label
+            <legend class="title-legend">CREATE A NEW USER</legend>
+            <label class="form-label"
               >USERNAME: <input type="text" name="username" required />
-            </label>
-            <label
+            </label><br>
+            <label class="form-label"
               >PASSWORD: <input type="password" name="password" required />
-            </label>
+            </label><br>
             <input type="submit" value="Create Account" />
           </fieldset>
         </form>

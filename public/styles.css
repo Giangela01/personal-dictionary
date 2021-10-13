@@ -4,5 +4,120 @@ font-family: 'Montserrat', sans-serif; */
 #title-line {
     font-family: 'Inconsolata', monospace;
     font-size: 30px;
+    margin-left: 18px;
+}
 
+.tag-line {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: white;
+    margin-left: 25px;
+}
+
+.tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: purple;
+    margin-left: 25px;
+}
+
+#s-word {
+    margin: 15px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+#s-btn {
+    margin: 0 30px 0 30px;
+}
+
+.col{
+    border: solid 10px black;
+    margin: 0 5px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.form-control {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+#text-form {
+    max-width: 90%; 
+    margin-left: 90px;
+}
+
+.title-legend{
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+}
+.nav-link {
+    padding-top: 20px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #9b4dca;
+    border-color: #9b4dca;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+audio {
+    width: 150px;
+    height: 20px;
+}
+
+.main-word {
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p.part-of-speech {
+    font-size: 20px;
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+div #def-title {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div #definition {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p.origin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+th {
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+}
+
+td {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+
+}
+#view-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    width:130px;
+}
+
+.log-size {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+lh {
+    font-size: 18px;
 }

@@ -22,14 +22,14 @@
             </tr>
             <% for (word of words) { %>
             <tr>
-                <td><%= word.word %></td>
+                <td><a href="/words/<%= word._id %>"><%= word.word %></a> </td>
                 <td><%= word.log %></td>
                 <td style="width: 330px"><%= word.time %></td>
                 <td>
                     <form action="/words/<%= word._id %>?_method=DELETE " method="post">
-                        <input type="submit" value="Delete" />
+                        <input type="submit" value="Delete" id="view-btn"/>
                     </form>
-                    <a href="/words/<%= word._id %>/edit"><button type="button">EDIT LOG</button></a></td>
+                    <a href="/words/<%= word._id %>/edit"><button type="button" id="view-btn">EDIT LOG</button></a></td>
             </tr>
             <% } %>
         </table>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
+
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark">
@@ -8,22 +9,18 @@
                 <span class="navbar-brand mb-0 h1" id="title-line">Dictionary + Logs</span>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end" role="group">
                     <a href="/words"><button type="button" class="btn btn-primary me-md-2">Search Word</button></a>
-                    <a href="/words/saveword"><button type="button" class="btn btn-primary me-md-2">Saved Words</button></a>
+                    <a href="/words/saveword"><button type="button" class="btn btn-primary me-md-2">Saved
+                            Words</button></a>
                     <a href="/user/logout"><button type="button" class="btn btn-primary">Logout</button></a>
                 </div>
         </nav>
     </header>
     <div class="center-align">
-        <form action="/words/<%= word._id %>?_method=PUT" method="post">
-          <fieldset>
-            <legend class="title-legend">Subject: <em><%= word.word %> </em> </legend>
-<br>
-            <label>
-              CHANGE MAIN LOG:</label>
-              <textarea class="form-control" name="log" rows="5" id="text-form"><%= word.log %></textarea> <br>
-            <input type="submit" value=" EDIT LOG" />
-          </fieldset>
-        </form>
-      </div>
+        <legend class="title-legend">Subject: <em><%= word.word %> </em> </legend>
+        <br>
+        <label class="title-legend">MAIN LOG:</label>
+        <p class="log-size"><%= word.log %></p>
+    </div>
 </body>
+
 </html>

@@ -5,16 +5,16 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <div>
+      <div class="center-align">
         <form action="/user/login" method="post">
-          <fieldset  class="mb-3">
-            <legend>User Login</legend>
+          <fieldset>
+            <legend class="title-legend">USER LOGIN</legend>
             <label class="form-label"
-              >USERNAME: <input type="text" name="username" class="form-control" required />
-            </label>
+              >USERNAME: <input type="text" name="username" required />
+            </label><br>
             <label class="form-label"
-              >PASSWORD: <input type="password" name="password"  class="form-control" required />
-            </label>
+              >PASSWORD: <input type="password" name="password"  required />
+            </label><br>
             <input type="submit" value="Login" />
           </fieldset>
         </form>

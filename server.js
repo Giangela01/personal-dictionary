@@ -10,11 +10,6 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const app = express()
 
-const PORT = process.env.PORT || 4000;
-
-const MONGODB_URI = process.env.MONGODB_URI;
-mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true }
-    );
 //middleware
 app.use(morgan("tiny"))
 app.use(methodOverride("_method")) 

@@ -70,6 +70,15 @@ router.get("/:id/edit", (req, res) => {
     })
 })
 
+router.put("/:id", (req, res) => {
+    const id = req.params.id
+    Word.findByIdAndUpdate(id, req.body, {
+        new: true
+    }, (err, Word) => {
+        res.redirect("/words/saveword")
+    })
+})
+
 router.delete("/:id", (req, res) => {
     const id = req.params.id
     Word.findByIdAndRemove(id, (err, word) => {

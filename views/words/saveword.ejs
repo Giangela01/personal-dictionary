@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark">
@@ -16,7 +15,7 @@
     <div class="container">
         <table>
             <tr>
-                <th>Word</th>
+                <th>Subject</th>
                 <th>Logs</th>
                 <th>Time Saved</th>
                 <th>Actions</th>
@@ -26,9 +25,14 @@
                 <td><%= word.word %></td>
                 <td><%= word.log %></td>
                 <td style="width: 330px"><%= word.time %></td>
-                <td>Delete</td>
+                <td>
+                    <form action="/words/<%= word._id %>?_method=DELETE " method="post">
+                        <input type="submit" value="Delete" />
+                    </form>
+                    <a href="/words/<%= word._id %>/edit"><button type="button">EDIT LOG</button></a></td>
             </tr>
             <% } %>
         </table>
     </div>
 </body>
+</html>

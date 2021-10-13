@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Dictionary + Logs</span>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end" role="group">
+                    <a href="/words"><button type="button" class="btn btn-primary me-md-2">Search Word</button></a>
+                    <a href="/words/saveword"><button type="button" class="btn btn-primary me-md-2">Saved Words</button></a>
+                    <a href="/user/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+                </div>
+        </nav>
+    </header>
+    <div>
+        <form action="/words/<%= word._id %>?_method=PUT" method="post">
+          <fieldset>
+            <legend>Edit Subject Log: <%= word.word %></legend>
+            <label
+              >SUBJECT LOG:
+              <input type="text" name="subject" placeholder="Enter new subject" 
+              value="<%= word.word %>"/>
+            </label><br>
+            <label>
+              MAIN LOG:</label>
+              <textarea class="form-control" name="log" rows="5"><%= word.log %></textarea> <br>
+            <input type="submit" value=" Change My Animal's Info" />
+          </fieldset>
+        </form>
+      </div>
+</body>
+</html>

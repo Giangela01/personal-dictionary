@@ -11,6 +11,8 @@ const MongoStore = require('connect-mongo');
 const app = express()
 
 //middleware
+const mongoURI = process.env.MONGODB_URI
+
 app.use(morgan("tiny"))
 app.use(methodOverride("_method")) 
 app.use(express.urlencoded({
@@ -19,7 +21,7 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 app.use(session({
     secret: process.env.SECRET,
-    store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
+    store: MongoStore.create({mongoURI}),
     saveUninitialized: true,
     resave: false,
 }))

@@ -17,9 +17,8 @@ app.use(express.urlencoded({
     extended: true
 }))
 app.use(express.static("public"))
-const SECRET = process.env.SECRET
 app.use(session({
-    secret: SECRET,
+    secret: "library",
     store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
     saveUninitialized: true,
     resave: false,

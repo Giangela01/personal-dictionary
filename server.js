@@ -10,9 +10,12 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const app = express()
 
-//middleware
-const mongoURI = process.env.MONGODB_URI
+const PORT = process.env.PORT || 4000;
 
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true }
+    );
+//middleware
 app.use(morgan("tiny"))
 app.use(methodOverride("_method")) 
 app.use(express.urlencoded({
@@ -21,7 +24,7 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 app.use(session({
     secret: process.env.SECRET,
-    store: MongoStore.create({mongoURI}),
+    store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
     saveUninitialized: true,
     resave: false,
 }))

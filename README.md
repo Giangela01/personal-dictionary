@@ -2,6 +2,15 @@
 "Dictionary + Log" is a website that allows users to search for words they might not know of the meaning and also a reading accompaniment; Wherein, they could create an account and write/log their thoughts.
 
 ### Usage Example
+![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20main%20page.png)
+User:
+![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20create%20user.png)
+![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20login.png)
+User Show Pages:
+![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20user%20main%20page.png)
+![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20log%20page.png)
+![Website Image](https://github.com/Giangela01/personal-dictionary/blob/main/images/dic%2Blog%20log%20page.png)
+
 
 ### Technologies Used
 * EJS| CSS3 | Javascript | jQuery

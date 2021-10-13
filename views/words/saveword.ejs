@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
+
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Dictionary + Logs</span>
-                <div class="btn-group" role="group">
-                    <a href="/user/index"><button type="button" class="btn btn-primary btn-sm">Search Word</button></a>
-                    <a href="/user/logout"><button type="button" class="btn btn-primary btn-sm">Logout</button></a>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end" role="group">
+                    <a href="/words"><button type="button" class="btn btn-primary me-md-2">Search Word</button></a>
+                    <a href="/user/logout"><button type="button" class="btn btn-primary">Logout</button></a>
                 </div>
         </nav>
     </header>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Word</th>
+                <th>Logs</th>
+                <th>Time Saved</th>
+                <th>Actions</th>
+            </tr>
+            <% for (word of words) { %>
+            <tr>
+                <td><%= word.word %></td>
+                <td><%= word.log %></td>
+                <td style="width: 330px"><%= word.time %></td>
+                <td>Delete</td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
 </body>

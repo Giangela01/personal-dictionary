@@ -6,8 +6,9 @@ const {
 } = mongoose
 
 const wordsSchema = new Schema({
-    Word: String,
-    Log: String,
+    word: String,
+    log: String,
+    time : { type : Date, default: Date.now },
 })
 const Word = model("Word", wordsSchema);
 

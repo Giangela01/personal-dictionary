@@ -10,6 +10,25 @@ router.use((req, res, next) => {
     }
 });
 
+router.get("/seed", (req, res) => {
+
+    const wordLog = [{
+        word: "test1",
+        log: "testing testing",
+    },
+    {
+        word: "test2",
+        log: "testing",
+    },
+    ]
+
+    Word.remove({}, (err, data) => {
+        Word.create(wordLog, (err, data) => {
+            res.json(data);
+        });
+    });
+});
+
 router.get("/", (req, res) => {
     Word.find({
         username: req.session.username
@@ -20,9 +39,26 @@ router.get("/", (req, res) => {
     })
 })
 
+router.post("/", (req, res) =>{
+    req.body.username = req.session.username
+    Word.create(req.body, (err, word) => {
+        res.redirect("/words")
+    })
+})
 
-router.get('/savedwords', (req, res) => {
-    res.render("words/saveword.ejs")
+router.get('/saveword', (req, res) => {
+    Word.find({
+        username: req.session.username
+    }, (err, words) => {
+        res.render("words/saveword.ejs", {
+            words
+        })
+    })
+})
+router.post("/words", (req, res) => {
+    Words.create(req.body, (err, word) => {
+        res.redirect("/words")
+    })
 })
 
 router.get("/:id/edit", (req, res) => {

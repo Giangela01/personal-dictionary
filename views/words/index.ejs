@@ -7,9 +7,9 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Dictionary + Logs</span>
-                <div class="btn-group" role="group">
-                    <a href="/words/saveword"><button type="button" class="btn btn-primary btn-sm">Saved Words</button></a>
-                    <a href="/user/logout"><button type="button" class="btn btn-primary btn-sm">Logout</button></a>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end" role="group">
+                    <a href="/words/saveword"><button type="button" class="btn btn-primary me-md-2">Saved Words</button></a>
+                    <a href="/user/logout"><button type="button" class="btn btn-primary">Logout</button></a>
                 </div>
         </nav>
         <form id="search">
@@ -31,12 +31,12 @@
                 <form action="/words" method="post">
                     <div class="mb-3">
                         <label class="form-label">Word:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                        <input type="text" class="form-control" name="word"
                             placeholder="A word you want to save...">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Log:</label>
-                        <textarea class="form-control" rows="3"></textarea>
+                        <textarea class="form-control" name="log" rows="3"></textarea>
                         <input type="submit" value="Save Your Word" />
                     </div>
             </div>
